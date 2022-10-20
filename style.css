@@ -63,13 +63,15 @@ a
 .loginMessage
 {
     font-weight: bold;
+    position: absolute;
+    bottom: 160px;
 }
 
 .footerBox
 {
     box-sizing: border-box;
-    min-height: 35%;
-    justify-content: flex-start;
+    height: 35%;
+    justify-content: center;
     gap: 30px;
     padding-top: 30px;
     background-color: rgb(247, 247, 247);
@@ -77,7 +79,9 @@ a
 }
 .mainBodyBox
 {
-    min-height: 30%;
+    overflow: auto;
+    position: relative;
+    height: 30%;
     padding-bottom: 20px;
 }
 .headerBox
@@ -86,7 +90,7 @@ a
     box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
-    min-height: 35%;
+    height: 35%;
     background-color: rgb(247, 247, 247);
 }
 button
@@ -99,6 +103,9 @@ button
     color: aliceblue;
     font-size: 1em;
     font-weight: bold;
+    position: fixed;
+    bottom: 230px;
+
     
     width: 200px;
     height: 45px;
@@ -129,10 +136,26 @@ label
 {
     font-size: 10px;
 }
+.hint
+{
+    font-size: 10px;
+}
 input
 {
+    appearance: none;
     border-radius: 5px;
+    border-width: 1px;
     border-style: solid;
-    width: 200px;
+    width: 250px;
     height: 20px;
+}
+input:focus
+{
+    outline: none;
+    border-color: rgb(17, 0, 255);
+}
+
+input:invalid
+{
+    border-color: red;
 }
